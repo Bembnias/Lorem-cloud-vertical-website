@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap');
+@import 'configuration/_horizontal.scss';
+@import 'configuration/_variables.scss';
+@import 'configuration/_responsive.scss';
+@import '_popup.scss';
+
+html {
+  font-size: 1rem;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.one, .three {
+  background: $light;
+}
+
+.two, .four {
+  background: $dark;
+}
+
+// MENU - NAVIGATION BAR
+.menu {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  mix-blend-mode: exclusion;
+  .nav-right {
+    margin: 1.3rem 2.5rem 0 0;
+    .nav-element {
+      float: right;
+      color: $light;
+      margin: 0 1rem;
+      font-size: 1rem;
+      &:first-child {
+        margin: 0 0 0 1rem;
+      }
+    }
+  }
+  .brand {
+    width: 9rem;
+    margin: 2rem 0 0 2.5rem;
+    float: left;
+  }
+}
+
+// GLOBAL STYLES
+.all-center {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.txt-left {
+  text-align: left;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.25s ease-in;
+  &:hover {
+    opacity: 0.85;
+  }
+}
+
+.btn-rounded {
+  line-height: 1rem;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  padding: 0 2.4rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 10rem;
+  transition: 0.25s ease-in;
+  outline: none;
+  color: #111 !important;
+  &:hover {
+    opacity: 0.85;
+  }
+}
+
+.light {
+  background-color: $light;
+}
+
+.cream {
+  background-color: $cream;
+}
+
+.dark {
+  background-color: $dark;
+}
+
+.typ-dracula {
+  color: $dracula;
+}
+
+.typ-cream {
+  color: $cream;
+}
+
+.typ-positive {
+  color: #00e159;
+}
+
+.typ-negative {
+  color: #ff4142;
+}
+
+.grid-responsive {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+}
+
+.txt-1 {
+  font-size: 1.5rem;
+  margin: 4.5px auto;
+}
+
+.txt-2 {
+  font-size: 2rem;
+  margin: 10px auto;
+  font-weight: 600;
+}
+
+.txt-3 {
+  font-size: 3rem;
+  margin: 30px auto;
+  font-weight: 600;
+}
+
+.container {
+  margin-top: 75px;
+  height: 85vh;
+}
+
+.image-section {
+  img {
+    width: 60%;
+  }
+}
+
+.image-section-m {
+  img {
+    width: 40%;
+    transform: translateY(10%);
+  }
+}
+
+// TABLES
+@mixin table-rows {
+  background-color: $darker-two;
+  text-align: center;
+  color: $soft-blue;
+}
+
+.price-wrapper-1 {
+  margin: 0 auto;
+  height: 85vh;
+  h1 {
+    padding-top: 100px;
+  }
+}
+
+.price-table {
+  border-collapse: collapse;
+  margin: 60px auto 0 auto;
+  width: 80%;
+  border-radius: 15px;
+  overflow: hidden;
+  -webkit-box-shadow: 5px 5px 13px 0px rgba(12,8,34,1);
+  -moz-box-shadow: 5px 5px 13px 0px rgba(12,8,34,1);
+  box-shadow: 5px 5px 13px 0px rgba(12,8,34,1);
+  thead {
+    tr {
+      @include table-rows;
+      color: $pinky;
+      font-weight: 600;
+        th {
+          padding: 5px 0;
+        }
+      }
+    }
+  tbody {
+    tr {
+      @include table-rows;
+      font-weight: 400;
+      &:nth-child(odd) {
+        background-color: $darker-one;
+      }
+      td {
+        padding: 8px 0;
+        &:nth-child(1) {
+          font-weight: 600;
+        }
+      }
+      &:last-of-type {
+        border-bottom: 3px solid $pinky;
+      }
+    }
+  }
+}
+
+// MOBILE - CONTACT ICON
+.contact-mobile {
+  display: none;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: rgba(242,201,76,1);
+  padding: 10px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  border-radius: 50px;
+  cursor: pointer;
+  -webkit-box-shadow: 1px 1px 10px 0 rgba(242,201,76,1);
+  -moz-box-shadow: 1px 1px 10px 0 rgba(242,201,76,1);
+  box-shadow: 1px 1px 10px 0 rgba(242,201,76,1);
+  animation: poping 6s infinite;
+  .fa-phone-alt {
+    margin-top: 2px;
+    color: $light;
+    font-size: 1.2rem;
+  }
+}
+
+@keyframes poping {
+  0% {padding: 10px;}
+  10% {padding: 12px;}
+  15% {padding: 10px;}
+  20% {padding: 12px;}
+  25% {padding: 10px;}
+  30% {padding: 10px;}
+  40% {padding: 10px;}
+  50% {padding: 10px;}
+  60% {padding: 10px;}
+  70% {padding: 10px;}
+  80% {padding: 10px;}
+  90% {padding: 10px;}
+  100% {padding: 10px;}
+}
+
+@media screen and (max-width: 530px) {
+  .contact-mobile {
+    display: block;
+  }
+}

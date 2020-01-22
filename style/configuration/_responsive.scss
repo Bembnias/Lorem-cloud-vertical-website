@@ -1,0 +1,96 @@
+@media only screen and (max-width: 475px) {
+  html, body {
+    max-width: 100%;
+  }
+
+  th, td {
+    padding: 3px 0 !important;
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  .menu {
+    display: flex;
+    align-items: center;
+    mix-blend-mode: normal !important;
+    z-index: 10;
+    padding-top: 8px;
+    background-color: $light;
+    -webkit-box-shadow: 0px 5px 8px 0px rgba(29,25,51,0.1);
+    -moz-box-shadow: 0px 5px 8px 0px rgba(29,25,51,0.1);
+    box-shadow: 0px 5px 8px 0px rgba(29,25,51,0.1);
+    .brand {
+      mix-blend-mode: exclusion !important;
+      position: relative;
+      display: block;
+      margin: 1.2rem auto !important;
+    }
+  }
+
+  .nav-element {
+    color: $light !important;
+    background-color: $dark !important;
+  }
+
+  .btn-rounded {
+    display: none;
+  }
+
+  .home-image {
+    width: 90% !important;
+  }
+
+  .home-description {
+    padding: 0 !important;
+  }
+
+  .grid-responsive {
+    grid-template-columns: 1fr !important;
+    grid-gap: 0 !important;
+  }
+}
+
+@media only screen and (min-width: 531px) and (max-width: 670px) {
+  .home-description {
+    padding: 0 !important;
+  }
+
+  .home-image {
+    width: 60% !important;
+  }
+
+  .grid-responsive {
+    grid-template-columns: 1fr !important;
+    grid-gap: 0 !important;
+  }
+}
+
+@media only screen and (max-width: 830px) {
+  .hide-on-small {
+    display: none;
+  }
+
+  .grid-responsive {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+
+    .txt-3 {
+      font-size: 2rem !important;
+    }
+    
+    .txt-2 {
+      font-size: 1.75rem !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  .txt-3 {
+    font-size: 2.5rem !important;
+  }
+
+  .txt-1 {
+    font-size: 1.05rem !important;
+  }
+}
