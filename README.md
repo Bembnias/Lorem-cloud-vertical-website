@@ -4,7 +4,7 @@ if use on mobile devices (phones, small tablets, etc.)
 On the site you can find simple SVG animations too.
 ## Website created with:
  - HTML5
- - SASS
+ - SASS (CSS Keyframes)
  - Javascript (es6)
  ## SVG Images made with:
  - Adobe Illustrator
